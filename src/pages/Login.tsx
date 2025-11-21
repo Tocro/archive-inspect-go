@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -72,7 +72,10 @@ const Login = () => {
             </Button>
           </form>
           <div className="mt-4 text-center text-sm text-muted-foreground">
-            Demo: Login with your backend credentials
+            Don't have an account?{' '}
+            <Link to="/register" className="text-primary hover:underline">
+              Sign up
+            </Link>
           </div>
         </CardContent>
       </Card>
