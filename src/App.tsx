@@ -7,6 +7,7 @@ import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import { LocationProvider } from "./contexts/LocationContext";
 import { SocketProvider } from "./contexts/SocketContext";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Home from "./pages/Home";
 import TripBooking from "./pages/TripBooking";
 import NotFound from "./pages/NotFound";
@@ -34,6 +35,7 @@ const App = () => (
             <SocketProvider>
               <Routes>
                 <Route path="/" element={<Login />} />
+                <Route path="/register" element={<Register />} />
                 <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
                 <Route path="/book-trip" element={<ProtectedRoute><TripBooking /></ProtectedRoute>} />
                 <Route path="*" element={<NotFound />} />
